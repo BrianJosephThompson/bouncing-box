@@ -1,0 +1,29 @@
+<html style='background-color: black'>
+  <div id="my_bouncing_box" style= "background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;" >thompson_b</div>
+  <script type="text/javascript">
+    var x = setInterval(move,40);
+    var pos_left = 0;
+    var pos_top = 0;
+    var xspeed = 5
+    var yspeed = 5
+    var boxmove = document.getElementById("my_bouncing_box")
+    selection.style.height = window.innerHeight + 'px';
+    selection.style.width = window.innerWidth + 'px';  
+
+    function move() {
+        if(pos_left + my_bouncing_box.clientWidth >= window.innerWidth || pos_left < 0) 
+        {
+            xspeed = -xspeed;
+        }
+        if(pos_top +my_bouncing_box.clientHeight >= window.innerHeight || pos_top < 0) 
+        {
+            yspeed =-yspeed;
+        }
+
+              pos_left += xspeed;
+              pos_top += yspeed;
+              boxmove.style.left = pos_left + "px";
+              boxmove.style.top = pos_top + "px";
+          }
+  </script>
+</html>
